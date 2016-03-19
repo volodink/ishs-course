@@ -2,6 +2,8 @@
 
 #define SENSOR_ADDR 0x68; 
 
+unsigned char bytes[14];
+
 void setup(){
   Wire.begin();
   
@@ -22,6 +24,10 @@ void loop(){
   Wire.requestFrom(SENSOR_ADDR, 14, true);
   
   // read 14 DATAbytes here
+  for (int i = 0; i < 14; i++)
+      bytes[i] = Wire.read();
+  
+  // convert into ints
   // ...
   
   delay(30);
