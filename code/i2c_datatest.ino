@@ -5,7 +5,7 @@
 void setup(){
   Wire.begin();
   
-  Wire.beginTransmission(MPU_addr);
+  Wire.beginTransmission(SENSOR_ADDR);
   Wire.write(SENSOR_ADDR);  // POWER register
   Wire.write(0x00);     // dont sleep
   Wire.endTransmission(true);
