@@ -6,7 +6,7 @@ void setup(){
   Wire.begin();
   
   Wire.beginTransmission(SENSOR_ADDR);
-  Wire.write(SENSOR_ADDR);  // POWER register
+  Wire.write(0x6b);  // POWER register
   Wire.write(0x00);     // dont sleep
   Wire.endTransmission(true);
   
