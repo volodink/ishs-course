@@ -14,7 +14,7 @@ void setup(){
 }
 
 void loop(){
-  Wire.beginTransmission(MPU_addr);
+  Wire.beginTransmission(SENSOR_ADDR);
   Wire.write(0x3B);  // begin from 0x3b
   Wire.endTransmission(false);
   
