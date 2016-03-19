@@ -18,6 +18,9 @@ void loop(){
   Wire.write(0x3B);  // begin from 0x3b
   Wire.endTransmission(false);
   
+  // request 14 bytes here
+  Wire.requestFrom(SENSOR_ADDR, 14, true);
+  
   // read 14 DATAbytes here
   // ...
   
