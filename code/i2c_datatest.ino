@@ -14,7 +14,12 @@ void setup(){
 }
 
 void loop(){
-  // read DATA here 
+  Wire.beginTransmission(MPU_addr);
+  Wire.write(0x3B);  // begin from 0x3b
+  Wire.endTransmission(false);
+  
+  // read 14 DATAbytes here
+  // ...
   
   delay(30);
 }
