@@ -30,5 +30,8 @@ void loop(){
   // convert into ints
   // ...
   
+  // print the ints
+  // ...
+  
   delay(30);
 }
